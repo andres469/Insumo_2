@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Pokemon App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen = true>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-button (click)=getPokemonDataID(Id)><ion-icon name="arrow-down-circle-outline"></ion-icon> </ion-button>
+      <ion-input type="number" [(ngModel)]="Id"></ion-input>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Nombre del Pokémon: {{ pokemon1 }}</p>
+      <img src="{{ pokemon }}" alt="">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-button (click)=getPokemonDataName(Name)><ion-icon name="arrow-down-circle-outline"></ion-icon> </ion-button>
+      <ion-input type="String" [(ngModel)]="Name"></ion-input>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Nombre del Pokémon: {{ pokemon3 }}</p>
+      <img src="{{ pokemon2 }}" alt="">
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+<ion-card>
+  <ion-card-header>
+    <p>Id Item</p>
+    <ion-button (click)=getItemData(itemid)><ion-icon name="arrow-down-circle-outline"></ion-icon> </ion-button>
+    <ion-input type="number" [(ngModel)]="itemid"></ion-input>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{ item.name }}</p>
+    <ion-img [src]=item.sprites.default alt="" ></ion-img>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <p>nombre Item</p>
+    <ion-button (click)=getItemData1(itemid1)><ion-icon name="arrow-down-circle-outline"></ion-icon> </ion-button>
+    <ion-input [(ngModel)]="itemid1"></ion-input>
+  </ion-card-header>
+  <ion-card-content>
+    
+    <p>{{ item1.id }}</p>
+    <ion-img [src]=item.sprites.default alt=""></ion-img>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
